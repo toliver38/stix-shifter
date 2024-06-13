@@ -1,0 +1,53 @@
+{
+    "connection": {
+        "type": {
+            "displayName": "PostgreSQL",
+            "group": "postgresql"
+        },
+        "host": {
+            "type": "text",
+            "regex": "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9_:/\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9_:/\\-]*[A-Za-z0-9])$"
+        },
+        "port": {
+            "type": "number",
+            "default": 5432,
+            "min": 1,
+            "max": 65535
+        },
+        "database": {
+            "type": "text"
+        },
+        "help": {
+            "type": "link",
+            "default": "https://www.ibm.com/docs/en/cloud-paks/cp-security/1.6.0?topic=administering-universal-data-insights-connectors"
+        },
+        "cert": {
+            "type": "password",
+            "optional": true
+        },
+        "selfSignedCert": {
+            "type": "password",
+            "optional": true
+        },
+        "options": {
+            "unmapped_fallback": {
+                "default": true
+            },
+            "table": {
+                "type": "text",
+                "optional": false
+            }
+        }
+    },
+    "configuration": {
+        "auth": {
+            "type" : "fields",
+            "username": {
+                "type": "password"
+            },
+            "password": {
+                "type": "password"
+            }
+        }
+    }
+}
